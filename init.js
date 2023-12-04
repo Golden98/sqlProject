@@ -1,3 +1,8 @@
+/*
+By: Brayden Golden
+
+Purpose: to initilize a database
+*/
 const mysql = require('mysql2');
 
 const connection = mysql.createConnection({

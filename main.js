@@ -1,22 +1,16 @@
+/*
+By: Brayden Golden
+
+Purpose: to implement CRUD operations on a mysql database, including parameterization to prevent sql injection. 
+         Connects to my profile on deltona, can change the connection options in connect().
+         Uses callbacks instead of promises because connection was rejected when using mysql2-promise.
+         init.js will initialize the database and insert a few random entries.
+
+*/
 const prompt = require('prompt-sync') ({sigint: true});
 const mysql = require('mysql2');
 
 var connection = connect();
-
-// const connection = mysql.createConnection({
-//     host: 'localhost',
-//     user: 'my.goldent3',
-//     password: 'jyvcbbio',
-//     database: 'my_goldent3_default'
-// });
-
-// connection.execute('SELECT ? AS test;', ['FirstName'], (err, res, fields) => {
-//     console.log("it ran");
-//     console.log(err);
-//     console.log(res);
-//     console.log(fields);
-// });
-//ask();
 
 ask();
 
